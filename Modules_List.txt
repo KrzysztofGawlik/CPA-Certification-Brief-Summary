@@ -1,0 +1,18 @@
+Module 1
+    Variables
+    Comments
+    Basic I/O operations
+    Flow control (if)
+Module 2
+    Advanced flow control (if, else, switch, and loops)
+    Data aggregates
+Module 3
+    Pointers
+    Functions
+    Memory
+Module 4
+    Arrays of pointers
+    Conversions
+    Strings
+    Namespaces
+    Exceptions
