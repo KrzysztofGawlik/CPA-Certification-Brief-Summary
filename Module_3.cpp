@@ -91,8 +91,18 @@ void Overloaded_Functions() {
 
 }
 
-void Sorting() {
+void Memory_On_Demand() {
 
-    
+    void *ptr; // Amorphous pointer, could point to any type.
+    *ptr; // Cannot be dereferenced (prohibited by compiler).
+
+    float *array = new float[5]; // "New" returns a pointer and allocates memory.
+    delete [] array; // "Delete" will free the memory; "[]" for arrays.
+
+    float * arr;
+    arr = new float[5]; // Allocate the memory.
+    for (int i = 0; i < 5; i++)
+        arr[i] = i;
+    delete [] arr; // Free the memory.
 
 }
