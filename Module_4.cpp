@@ -6,6 +6,12 @@ void f(int x);
 float g(void){
     return -1;
 }
+namespace Volvo {
+    string plates = "VLO 77656";
+}
+namespace New_Version_Audi {
+    string plates = "AD 12121";
+}
 
 int main(void){
 
@@ -93,6 +99,24 @@ int main(void){
     name.empty(); // Checks if the string is empty - return boolean
     name.clear(); // Truncate the string
     sec_name[4]; // Return the char under index 4 
+    name = "Krzysztof";
+    name.append(sec_name); // Append one string to the other
+    name.append(3, '!'); // Append 3 x '!'
+    name.append(name, 0, 3); // Append substring - "Krz"
+    name.push_back('@'); // To append a single char in more efficient way
+    name.insert(9, ", "); // Insert ", " at index 9
+    sec_name.assign(5, '-'); // Replaces string with a new one
+    sec_name.replace(0, 5, name, 11, 6); // Replace in sec_name from 0 5 letters with the name from 11 6 letters
+    name.erase(9, 1); // Erase 1 letter from index 9
+    name.swap(sec_name); // Swap strings without auxiliary variable
+
+    // NAMESPACES
+    std::cout << "some txt" << std::endl; // std:: - scope resolution operator, identifies home namespace
+    namespace Audi = New_Version_Audi; // Audi has been renamed to New_Version_Audi, now both namespaces are valid
+    cout << Volvo::plates << " // " << Audi::plates << endl; // You can declare your own namespaces (line 9-14)
+    {   using namespace Volvo;
+        cout << plates << endl; } // Selectively used namespaces
+    cout << New_Version_Audi::plates << endl; // Renamed namespace used
 
     return 0;
 }
