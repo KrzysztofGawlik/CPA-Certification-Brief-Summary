@@ -16,3 +16,14 @@ Module 4
     Strings
     Namespaces
     Exceptions
+Module 5.1
+    Classes (superclasses/subclasses)
+    Inheritance
+    Objects
+    Access modifiers
+    Constructors
+Module 5.2
+    Anatomy of the class
+    Overloading classes
+    Copying objects
+    Memory leaks (destructors)
