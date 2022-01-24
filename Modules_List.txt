@@ -27,3 +27,10 @@ Module 5.2
     Overloading classes
     Copying objects
     Memory leaks (destructors)
+Module 5.3
+    Static variables
+    Static functions
+Module 5.4
+    Pointers to objects
+    Pointers to fields
+    Objects inside objects
