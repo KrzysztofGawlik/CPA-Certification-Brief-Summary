@@ -10,7 +10,7 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\.vscode\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\.vscode\\run.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
