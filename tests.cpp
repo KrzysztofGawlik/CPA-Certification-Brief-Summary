@@ -1,10 +1,34 @@
 #include <iostream>
+#include <string>
 using namespace std;
-
-int main(void){
-   int t[] = {8,4,3,2,1}, i;
-   for(i=t[4];i<t[0];i++)
-    {t[i-1]=-t[3];cout << t[i-1] << endl;}
-    cout << i;
-    return 0;
+class Pet {
+protected:string name;
+public:   Pet(string name) { this -> name = name; }
+	    virtual void MakeSound(void) { cout << name << " is silent :(" << endl; }
+};
+class Dog : public Pet {
+public:	Dog(string name) : Pet(name) {}
+	void MakeSound(void) { cout << name << " says: Woof!" << endl; }
+};
+class GermanShepherd : public Dog {
+public:	GermanShepherd(string name) : Dog(name) {}
+	void MakeSound(void) { cout << name << " says: Wuff!" << endl; }
+};
+class MastinEspanol : public Dog {
+public:	MastinEspanol(string name) : Dog(name) {}
+	void MakeSound(void) { cout << name << " says: Guau!" << endl; }
+};
+void PlayWithPet(Pet *pet) {
+	pet -> MakeSound();
+}
+int main(void) {
+	Pet *pet = new Pet("creature");
+	Dog *dog = new Dog("Dog");
+	GermanShepherd *gs = new GermanShepherd("Hund");
+	MastinEspanol *mes = new MastinEspanol("Perro");
+	PlayWithPet(pet);
+	PlayWithPet(dog);
+	PlayWithPet(gs);
+	PlayWithPet(mes);
+	return 0;
 }
