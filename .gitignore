@@ -1,3 +1,4 @@
 *.exe
 tests.cpp
 .vscode/*
+!.vscode/*
